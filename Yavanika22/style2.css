@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(#0e0808c0,#0e0808c0),url(PSX_20220417_021256.jpg);
+    
+    
+    background-position: center;
+    background-size:cover;
+    overflow-y: hidden;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    transition: background 1s;
+}
+nav .logo1{
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 500;
+    font-family: 'Righteous', cursive;
+    color: #fff;
+}
+nav .logo2{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Righteous', cursive;
+    color: #fff;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 50px;
+    font-family: 'Poppins',sans-serif;
+}
+nav a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+nav:hover{
+    background: #0e0808d6;
+}
+.card{
+    display: inline-block;
+    margin-top: 2%;
+    margin-left: 3%;
+    padding: 2px;
+    width: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+.card img{
+    height:300px
+}
+.card-inner{
+    position:relative;
+    width: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+.front{
+    backface-visibility: hidden;
+}
+.front img{
+    width:100%;
+    border-radius: 10px;
+}
+.back{
+    backface-visibility: hidden;
+    background-color:#d01b07;
+    color:#fff;
+    font-family: 'Poppins',sans-serif;
+    font-size: 10px;
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transform: rotateY(180deg);
+}
+.back a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    /* font-weight: 00; */
+    margin-top: 20px;
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: 5px 5px;
+    border-radius: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.back a:hover{
+    background-color:#e2d7d5a3;
+    color:black;
+    font-weight: 500;
+}
+.card:hover .card-inner{
+    transform: rotateY(-180deg);
+}

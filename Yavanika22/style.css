@@ -1,0 +1,122 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    /* font-family: 'Poppins',sans-serif; */
+}
+
+/* body{
+    background-image: url("PSX_20220417_021256.jpg");
+    background-position: center;
+    background-size: cover;
+}  */
+
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(#0e0808c0,#0e0808c0),url(PSX_20220417_021256.jpg);
+    
+    
+    background-position: center;
+    background-size: cover;
+    overflow-y: hidden;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    transition: background 1s;
+}
+nav .logo1{
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 500;
+    font-family: 'Righteous', cursive;
+    color: #fff;
+}
+nav .logo2{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Righteous', cursive;
+    color: #fff;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 50px;
+    font-family: 'Poppins',sans-serif;
+}
+nav a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+nav:hover{
+    background: #0e0808d6;
+}
+.content{
+    text-align: center; 
+    margin-top: 6%;
+    margin-left: 3%;
+    color: #fff;
+}
+.content h1{
+    font-family: 'Righteous', cursive;
+    font-size: 150px;
+    line-height: 140px;
+    font-weight: 600;
+    text-shadow:0 0 3px #0e0c0c, 0 0 5px #1a0101;
+      
+}
+.content p {
+    font-family: 'Poppins',sans-serif;
+    font-size: 55px;
+    line-height: 140px;
+    font-weight: 600;
+    text-shadow:0 0 3px #0e0c0c, 0 0 5px #1a0101;
+    opacity: 0;
+}
+.content a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Poppins',sans-serif;
+}
+.links{
+    margin-top: 30px;
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: 10px 30px;
+    border-radius: 30px;
+    margin-right: 15px;
+    opacity: 0;
+}
+.slide-top{
+    animation: slidetop 1s linear forwards;
+}
+@keyframes slidetop{
+    0%{
+        transform: translate(0px,50px);
+        opacity:0;
+    }
+    100%{
+        transform: translate(0px);
+        opacity:1;
+    }
+}
+p.slide-top{
+    animation-delay: 1s;
+}
+.links.slide-top{
+    animation-delay: 2s;
+}
+.links:hover{
+    background-color: #f1e9e950;
+}
