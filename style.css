@@ -1,0 +1,67 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    line-height: 1.6;
+    background: #13181c;
+    font-family: sans-serif;
+}
+.card{
+    color: #ffff;
+    background-image: url(Limelight.png);
+    background-size:contain;
+    padding: 6.5rem 0 0;
+    max-width: 30ch;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+.cardcontent{
+    --padding:1rem;
+    padding: var(--padding);
+    background: linear-gradient(hsl(0 0% 0% / 0),hsl(0 0% 0% / 0.7)10%,hsl(0 0% 0% / 1));
+    transform: translateY(75%);
+    transition:transform 500ms ease;
+}
+.card-content > *:not(.cardtitle){
+    opacity: 0;
+    transition:opacity 500ms linear;
+}
+.card:hover .card-content>*{
+    opacity:1;
+}
+.card:hover .card-content{
+    transform: translateY(35%);
+}
+.cardtitle{
+    position: relative;
+    width: max-content;
+}
+.cardtitle::after{
+    content:" ";
+    position: absolute;
+    height: 4px;
+    width:calc(100% + var(--padding));
+    left: calc(var(--padding)*-1);
+    bottom:-3px;
+    background-color: rgb(250, 157, 7);
+}
+
+.button{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: rgba(9, 7, 7, 0.975);
+    background-color: rgb(250, 157, 7);
+    padding: 0.5em 0.5em;
+    border-radius: 0.25em;
+}
+.button:hover,.button:focus{
+    background-color: rgba(245, 245, 220, 0.525);
+}
